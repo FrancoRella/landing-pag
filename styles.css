@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@200;400;600;800&display=swap');
+@import url('https://fonts.googleapis.com/css2? family= Poppins:ital,wght@0,600;0,700;0,800;1,200;1,600 & family= Roboto+Slab:wght@200;400; 600;800 & mostrar=cambiar');
 
 * {
   box-sizing: border-box;
@@ -6,20 +7,21 @@
   padding: 0;
 }
 
-body {
-  background-image: url(/img/fondo.jpg);
+html {
+  background-image: url(/img/Fd.jpg);
   background-repeat: no-repeat;
   background-size: cover;
 }
 
 .containerNav {
-  height: 100px;
+  height: 85px;
   width: 100%;
-  background: #79cf68;
-  background: linear-gradient(to left, #79cf68 32%, #76cccf 77%);
+  background: #d3cce3;
+  background: linear-gradient(to right, #e9e4f0, #d3cce3);
   display: flex;
   align-items: center;
   font-size: 1rem;
+  gap: 60px;
 }
 
 .navBarcito {
@@ -28,7 +30,7 @@ body {
 
 img {
   width: 100px;
-  height: 100px;
+  height: 85px;
   padding-left: 20px;
 }
 
@@ -36,24 +38,120 @@ a {
   text-decoration: none;
   font-family: 'Roboto Slab', serif;
   font-weight: 400;
-  color: deeppink;
+  background: #15aacf;
+  background: linear-gradient(to right, #15aacf 48%, #cf1512 71%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 a:hover {
   font-weight: 600;
-  color: crimson;
+  background: #cf1512;
+  background: linear-gradient(to right, #cf1512 48%, #15aacf 71%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   font-size: 1.4rem;
   transition: all 1s;
-  background-color: bisque;
 }
 
 .navUl {
   display: flex;
   justify-content: center;
   font-size: 1.2rem;
-  gap: 6px;
+  gap: 20px;
 }
 
 .navLi {
   list-style: none;
+}
+
+.contenedorSection {
+  display: flex;
+  width: 85%;
+  height: 70%;
+  margin: 0 auto;
+  padding-top: 35px;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+}
+
+.primeraSection {
+  width: 50%;
+  height: 100%;
+  text-align: center;
+  background: #4776e6;
+  background: linear-gradient(to top, #8e54e9, #4776e6);
+  border-radius: 50px;
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  font-family: 'Roboto Slab', serif;
+}
+
+h1 {
+  font-size: 80px;
+  font-family: 'Roboto Slab', serif;
+  font-weight: 600;
+}
+
+.descriptionP {
+  text-align: center;
+  font-size: 23px;
+  line-height: 1.5;
+}
+.botons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  padding: 10px 5px;
+}
+
+.botonsB {
+  font-size: 17px;
+  padding: 5px;
+  border-radius: 20px;
+  gap: 30px;
+  text-transform: capitalize;
+  cursor: pointer;
+  background-color: rgb(3, 153, 253);
+  color: white;
+  font-weight: 600;
+}
+
+.botonsB:hover {
+  text-transform: uppercase;
+  background-color: coral;
+  color: black;
+  transition: 0.5s;
+}
+
+.sectionImg {
+  width: 50%;
+  height: 100%;
+}
+
+.imgFrut {
+  width: 90%;
+  height: 90%;
+  border-radius: 50px;
+}
+
+.segundaSection {
+  padding: 50px;
+  background-color: rgb(241, 186, 118);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+  min-height: 40%;
+}
+
+.segundaSection p {
+  font-size: 17px;
+  text-align: center;
+  font-family: 'Roboto Slab', serif;
+  font-weight: 400;
+  line-height: 1.5;
 }
