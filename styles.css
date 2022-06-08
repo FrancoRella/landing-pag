@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@200;400;600;800&display=swap');
 @import url('https://fonts.googleapis.com/css2? family= Poppins:ital,wght@0,600;0,700;0,800;1,200;1,600 & family= Roboto+Slab:wght@200;400; 600;800 & mostrar=cambiar');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@600&family=Poppins:ital,wght@0,600;0,700;0,800;1,200;1,600&family=Roboto+Slab:wght@200;400;600;800&display=swap');
 
 * {
   box-sizing: border-box;
@@ -8,10 +9,16 @@
 }
 
 html {
-  background-image: url(/img/Fd.jpg);
+  /*background-image: url(./img/Fd.jpg);
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: center;*/
+  background: #9796f0;
+  background: linear-gradient(to right, #fbc7d4, #9796f0);
+  scroll-behavior: smooth;
 }
+
+/**Menú de navegación**/
 
 .containerNav {
   height: 85px;
@@ -21,11 +28,7 @@ html {
   display: flex;
   align-items: center;
   font-size: 1rem;
-  gap: 60px;
-}
-
-.navBarcito {
-  width: 100%;
+  gap: 9rem;
 }
 
 img {
@@ -57,28 +60,35 @@ a:hover {
 .navUl {
   display: flex;
   justify-content: center;
-  font-size: 1.2rem;
-  gap: 20px;
+  align-items: flex-start;
+  font-size: clamp(1.2rem, 2vh, 3rem);
+  gap: 4rem;
 }
 
 .navLi {
   list-style: none;
 }
 
-.contenedorSection {
-  display: flex;
-  width: 85%;
-  height: 70%;
-  margin: 0 auto;
-  padding-top: 35px;
-  padding-bottom: 2%;
-  justify-content: center;
-  align-items: center;
-  gap: 50px;
+//**Primera Seccion**/
+
+.contenedorSections {
+  width: 100%;
+  height: 80%;
 }
 
 .primeraSection {
-  width: 50%;
+  display: flex;
+  margin: 0 auto;
+  padding-top: 35px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.contSection {
+  min-width: 250px;
+  max-width: 400px;
   height: 100%;
   text-align: center;
   background: #4776e6;
@@ -86,39 +96,39 @@ a:hover {
   border-radius: 50px;
   display: flex;
   flex-direction: column;
-  gap: 28px;
+  gap: 2.5rem;
   font-family: 'Roboto Slab', serif;
 }
 
 h1 {
-  font-size: 80px;
+  font-size: clamp(3.5rem, 5vh, 8rem);
   font-family: 'Roboto Slab', serif;
-  font-weight: 600;
+  font-weight: 800;
 }
 
 .descriptionP {
   text-align: center;
-  font-size: 23px;
+  font-size: clamp(1.5rem, 3vh, 5rem);
   line-height: 1.5;
 }
 .botons {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 20px;
+  gap: 1.5rem;
   padding: 10px 5px;
 }
 
 .botonsB {
-  font-size: 17px;
+  font-size: clamp(1rem, 1.5vh, 3rem);
   padding: 5px;
   border-radius: 20px;
-  gap: 30px;
   text-transform: capitalize;
   cursor: pointer;
   background-color: rgb(3, 153, 253);
   color: white;
   font-weight: 600;
+  transition: all 2s;
 }
 
 .botonsB:hover {
@@ -129,7 +139,8 @@ h1 {
 }
 
 .sectionImg {
-  width: 50%;
+  min-width: 250px;
+  max-width: 400px;
   height: 100%;
 }
 
@@ -141,7 +152,7 @@ h1 {
 
 .segundaSection {
   padding: 50px;
-  background-color: rgb(241, 186, 118);
+  background-color: rgba(241, 186, 118, 0.438);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -150,9 +161,217 @@ h1 {
 }
 
 .segundaSection p {
-  font-size: 17px;
+  font-size: clamp(1rem, 3vh, 4rem);
   text-align: center;
   font-family: 'Roboto Slab', serif;
   font-weight: 400;
   line-height: 1.5;
+}
+
+.sectionSec {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 25px;
+  gap: 1rem;
+}
+
+.sectionSec h2 {
+  font-size: clamp(2.5rem, 5vh, 4rem);
+  font-family: 'Roboto Slab', serif;
+  font-weight: 600;
+}
+
+.sectionP {
+  font-size: clamp(1.5rem, 3vh, 5rem);
+  font-family: 'Roboto Slab', serif;
+  font-weight: 400;
+}
+
+.advantages {
+  width: 100%;
+  height: 550px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 15px;
+  background-color: rgba(243, 219, 180, 0.472);
+}
+
+.cards {
+  min-width: 200px;
+  max-width: 350px;
+  height: 200px;
+  border: 3px solid black;
+  background-color: white;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 3px 4px black;
+  margin: 0 auto;
+  flex: 1 1 120px;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.cardsAfter {
+  position: absolute;
+  background-color: #9796f0d8;
+  width: 100%;
+  height: 100%;
+  font-size: clamp(10px, 18vh, 30px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Josefin Sans', sans-serif;
+  font-weight: 600;
+}
+.cardsAfter:hover {
+  display: none;
+}
+
+.cards .pEspecial {
+  font-size: clamp(1.3rem, 2vh, 3rem);
+  font-family: 'Roboto Slab', serif;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.cardsP {
+  font-size: clamp(1rem, 1vh, 2rem);
+  font-family: 'Roboto Slab', serif;
+  font-weight: 400;
+}
+
+.cards img {
+  width: 70px;
+  height: 55px;
+}
+
+.sectionTerc {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 25px;
+}
+
+.sectionTerc h2 {
+  font-size: clamp(2.5rem, 5vh, 4rem);
+  font-family: 'Roboto Slab', serif;
+  font-weight: 600;
+}
+
+/** Seccion de contacto**/
+.contactContainer {
+  display: flex;
+  width: 100vh;
+  height: 60vh;
+  border: 3px solid black;
+  margin: 0 auto;
+  border-radius: 10px;
+}
+
+.contactDetal {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  width: 50%;
+}
+
+.contact {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  justify-content: center;
+  align-items: center;
+  font-size: clamp(14px, 5vh, 16px);
+  font-family: 'Roboto Slab', serif;
+  font-weight: 600;
+}
+
+.contactDirection {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  gap: 15px;
+  font-size: clamp(12px, 5vh, 15px);
+  font-family: 'Roboto Slab', serif;
+  font-weight: 200;
+}
+
+.contactDirection p {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.contactDirection p img {
+  width: 45px;
+  height: 30px;
+}
+
+.mapa {
+  width: 50%;
+}
+.mapa > img {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+/**Footer**/
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 15vh;
+  gap: 8px;
+  background: #d3cce3;
+  background: linear-gradient(to right, #e9e4f0, #d3cce3);
+}
+
+.iconFooter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1px;
+}
+
+.i-footer {
+  width: 65px;
+  height: 50px;
+}
+
+.copyFoot {
+  font-size: clamp(12px, 5vh, 15px);
+  font-family: 'Roboto Slab', serif;
+}
+
+/**Medias Queries**/
+
+@media screen and (max-width: 400px) {
+  .navUl {
+    display: none;
+  }
+
+  .advantages {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: 5px;
+  }
 }
